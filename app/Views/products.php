@@ -4,7 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Management</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #007BFF;
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #007BFF;
+            padding: 20px 0;
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 768px) {
+            /* Add responsive styles here */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,7 +152,7 @@
                             <td><?= $pr['ProductQuantity'] ?></td>
                             <td><?= $pr['ProductPrice'] ?></td>
                             <td>
-                                <a href="/delete/<?= $pr['id'] ?>">Delete</a> || <a href="/edit/<?= $pr['id'] ?>">Edit</a>
+                                <a href="/delete/<?= $pr['id'] ?>"><i class="fas fa-trash"></i>Delete</a> || <a href="/edit/<?= $pr['id'] ?>"><i class="fas fa-edit"></i>Edit</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
